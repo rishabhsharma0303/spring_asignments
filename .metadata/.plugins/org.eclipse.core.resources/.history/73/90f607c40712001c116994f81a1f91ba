@@ -1,0 +1,5 @@
+package com.aop.demoAop.aspects;
+
+public class MyAspects {
+
+}

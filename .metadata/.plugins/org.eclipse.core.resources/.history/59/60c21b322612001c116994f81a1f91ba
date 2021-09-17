@@ -1,0 +1,10 @@
+package com.demo;
+
+@Component(value = "magician")
+ public class Magician {
+	public void doMagic() {
+		System.out.println("abara ka dabra....");
+		//return "rabbit from the hat";
+	}
+	
+}
