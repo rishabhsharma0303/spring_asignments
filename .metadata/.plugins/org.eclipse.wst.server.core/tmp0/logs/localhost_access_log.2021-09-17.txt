@@ -1,0 +1,4 @@
+127.0.0.1 - - [17/Sep/2021:12:55:15 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [17/Sep/2021:12:55:16 +0530] "GET /bookapp/WEB-INF/classes/com/bookapp/web/controller/BookController.java HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [17/Sep/2021:12:55:53 +0530] "GET /bookapp/WEB-INF/classes/com/bookapp/web/controller/BookController.java HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [17/Sep/2021:12:55:54 +0530] "GET /favicon.ico HTTP/1.1" 404 762

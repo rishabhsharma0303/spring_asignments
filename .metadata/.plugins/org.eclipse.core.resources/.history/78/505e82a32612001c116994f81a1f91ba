@@ -1,7 +1,0 @@
-package com.demo;
-public class AudienceAspect {
-public void clapping() {
-	System.out.println("clapping....");
-}
-
-}

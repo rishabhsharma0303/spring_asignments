@@ -5240,3 +5240,499 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 !ENTRY org.eclipse.core.net 4 0 2021-09-17 12:55:02.559
 !MESSAGE WinHttp.DetectAutoProxyConfigUrl for wpad failed with error 'The Proxy Auto-configuration URL was not found.
 ' #12180.
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2021-09-17 13:30:13.442
+!MESSAGE Connection to http://testng.org/testng-p2-update-site/p2.index failed on PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alert.createSSLException(Unknown Source)
+	at sun.security.ssl.TransportContext.fatal(Unknown Source)
+	at sun.security.ssl.TransportContext.fatal(Unknown Source)
+	at sun.security.ssl.TransportContext.fatal(Unknown Source)
+	at sun.security.ssl.CertificateMessage$T12CertificateConsumer.checkServerCerts(Unknown Source)
+	at sun.security.ssl.CertificateMessage$T12CertificateConsumer.onCertificate(Unknown Source)
+	at sun.security.ssl.CertificateMessage$T12CertificateConsumer.consume(Unknown Source)
+	at sun.security.ssl.SSLHandshake.consume(Unknown Source)
+	at sun.security.ssl.HandshakeContext.dispatch(Unknown Source)
+	at sun.security.ssl.HandshakeContext.dispatch(Unknown Source)
+	at sun.security.ssl.TransportContext.dispatch(Unknown Source)
+	at sun.security.ssl.SSLTransport.decode(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.decode(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readHandshakeRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:396)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.upgrade(DefaultHttpClientConnectionOperator.java:193)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.upgrade(PoolingHttpClientConnectionManager.java:389)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:429)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1000)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:992)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:988)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(Unknown Source)
+	at sun.security.validator.PKIXValidator.engineValidate(Unknown Source)
+	at sun.security.validator.Validator.validate(Unknown Source)
+	at sun.security.ssl.X509TrustManagerImpl.validate(Unknown Source)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(Unknown Source)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(Unknown Source)
+	... 27 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(Unknown Source)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(Unknown Source)
+	at java.security.cert.CertPathBuilder.build(Unknown Source)
+	... 33 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2021-09-17 13:30:14.528
+!MESSAGE Unable to read repository at http://testng.org/testng-p2-update-site/compositeContent.xml.
+!STACK 0
+javax.net.ssl.SSLHandshakeException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alert.createSSLException(Unknown Source)
+	at sun.security.ssl.TransportContext.fatal(Unknown Source)
+	at sun.security.ssl.TransportContext.fatal(Unknown Source)
+	at sun.security.ssl.TransportContext.fatal(Unknown Source)
+	at sun.security.ssl.CertificateMessage$T12CertificateConsumer.checkServerCerts(Unknown Source)
+	at sun.security.ssl.CertificateMessage$T12CertificateConsumer.onCertificate(Unknown Source)
+	at sun.security.ssl.CertificateMessage$T12CertificateConsumer.consume(Unknown Source)
+	at sun.security.ssl.SSLHandshake.consume(Unknown Source)
+	at sun.security.ssl.HandshakeContext.dispatch(Unknown Source)
+	at sun.security.ssl.HandshakeContext.dispatch(Unknown Source)
+	at sun.security.ssl.TransportContext.dispatch(Unknown Source)
+	at sun.security.ssl.SSLTransport.decode(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.decode(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readHandshakeRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:396)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.upgrade(DefaultHttpClientConnectionOperator.java:193)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.upgrade(PoolingHttpClientConnectionManager.java:389)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:429)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:246)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(Unknown Source)
+	at sun.security.validator.PKIXValidator.engineValidate(Unknown Source)
+	at sun.security.validator.Validator.validate(Unknown Source)
+	at sun.security.ssl.X509TrustManagerImpl.validate(Unknown Source)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(Unknown Source)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(Unknown Source)
+	... 25 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(Unknown Source)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(Unknown Source)
+	at java.security.cert.CertPathBuilder.build(Unknown Source)
+	... 31 more
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2021-09-17 13:32:03.909
+!MESSAGE No repository found at http://dl.bintray.com/testng-team/testng-p2-release/.
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2021-09-17 13:32:09.927
+!MESSAGE Connection to http://testng.org/testng-p2-update-site/p2.index failed on PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alert.createSSLException(Unknown Source)
+	at sun.security.ssl.TransportContext.fatal(Unknown Source)
+	at sun.security.ssl.TransportContext.fatal(Unknown Source)
+	at sun.security.ssl.TransportContext.fatal(Unknown Source)
+	at sun.security.ssl.CertificateMessage$T12CertificateConsumer.checkServerCerts(Unknown Source)
+	at sun.security.ssl.CertificateMessage$T12CertificateConsumer.onCertificate(Unknown Source)
+	at sun.security.ssl.CertificateMessage$T12CertificateConsumer.consume(Unknown Source)
+	at sun.security.ssl.SSLHandshake.consume(Unknown Source)
+	at sun.security.ssl.HandshakeContext.dispatch(Unknown Source)
+	at sun.security.ssl.HandshakeContext.dispatch(Unknown Source)
+	at sun.security.ssl.TransportContext.dispatch(Unknown Source)
+	at sun.security.ssl.SSLTransport.decode(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.decode(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readHandshakeRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:396)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.upgrade(DefaultHttpClientConnectionOperator.java:193)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.upgrade(PoolingHttpClientConnectionManager.java:389)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:429)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1000)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:992)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:988)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(Unknown Source)
+	at sun.security.validator.PKIXValidator.engineValidate(Unknown Source)
+	at sun.security.validator.Validator.validate(Unknown Source)
+	at sun.security.ssl.X509TrustManagerImpl.validate(Unknown Source)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(Unknown Source)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(Unknown Source)
+	... 27 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(Unknown Source)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(Unknown Source)
+	at java.security.cert.CertPathBuilder.build(Unknown Source)
+	... 33 more
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 15:42:13.845
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.WyMhoBLq
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 15:42:13.855
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.WyMhoBLq
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 15:42:13.865
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 15:42:13.875
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.WyMhoBLq => OK
+!SESSION 2021-09-17 20:20:21.978 -----------------------------------------------
+eclipse.buildId=4.4.2.201911201053-RELEASE
+java.version=1.8.0_261
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4 -data C:\Users\ve00ym268\Documents\sts-spring-workspace -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2021-09-17 20:20:30.720
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-09-17 20:20:30.721
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3c62be3c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@c6c84fa,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:43.812
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:43.844
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@54ecf27a[org.springframework.tooling.boot.ls:1.13.0.201911200938(id=632)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:43.902
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-09-17 20:20:44.076
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\ve00ym268'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:44.308
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-17 20:20:49.498
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-17 20:20:49.527
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:53.295
+!MESSAGE Boot LS startup time from start to initialized: 9370ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:53.348
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.XrlyPVkvisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.571
+!MESSAGE subscribing to classpath changes: sts4.classpath.XrlyPVkv isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.586
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.601
+!MESSAGE subsribers = {sts4.classpath.XrlyPVkv=Send Classpath Notifications(96)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.612
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.624
+!MESSAGE project productstore ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.635
+!MESSAGE project bookapp-mvc ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.645
+!MESSAGE Preparing classpath changed notification productstore
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.655
+!MESSAGE project demoAop ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.664
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.674
+!MESSAGE project Servers ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.685
+!MESSAGE classpath=114 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.695
+!MESSAGE project Servers SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.705
+!MESSAGE buffering callback sts4.classpath.XrlyPVkv productstore false 114
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.714
+!MESSAGE project aop ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.724
+!MESSAGE Preparing classpath changed notification bookapp-mvc
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.734
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.744
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.754
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.XrlyPVkv => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.765
+!MESSAGE classpath=54 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.778
+!MESSAGE buffering callback sts4.classpath.XrlyPVkv bookapp-mvc false 54
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.790
+!MESSAGE Preparing classpath changed notification demoAop
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.801
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.814
+!MESSAGE classpath=31 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.825
+!MESSAGE buffering callback sts4.classpath.XrlyPVkv demoAop false 31
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.835
+!MESSAGE Preparing classpath changed notification aop
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.845
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.857
+!MESSAGE classpath=33 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.869
+!MESSAGE buffering callback sts4.classpath.XrlyPVkv aop false 33
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.880
+!MESSAGE executing callback sts4.classpath.XrlyPVkv 4 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:20:54.934
+!MESSAGE executing callback sts4.classpath.XrlyPVkv SUCCESS [done]
+
+!ENTRY org.eclipse.core.net 4 0 2021-09-17 20:20:56.994
+!MESSAGE WinHttp.DetectAutoProxyConfigUrl for wpad failed with error 'The Proxy Auto-configuration URL was not found.
+' #12180.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:21:16.331
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.XrlyPVkv
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:21:16.341
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.XrlyPVkv
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:21:16.369
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:21:16.385
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.XrlyPVkv => OK
+
+!ENTRY org.eclipse.ui 2 2 2021-09-17 20:21:17.245
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+!SESSION 2021-09-17 20:25:14.250 -----------------------------------------------
+eclipse.buildId=4.4.2.201911201053-RELEASE
+java.version=1.8.0_261
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4 -data C:\Users\ve00ym268\Documents\sts-spring-workspace -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2021-09-17 20:25:18.562
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-09-17 20:25:18.562
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6f4fc83f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@66b90ab3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:23.104
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:23.116
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@55e75ce0[org.springframework.tooling.boot.ls:1.13.0.201911200938(id=632)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:23.130
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:23.195
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-09-17 20:25:25.539
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\ve00ym268'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-17 20:25:29.665
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-17 20:25:29.691
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:29.715
+!MESSAGE Boot LS startup time from start to initialized: 6558ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:29.815
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.MiGXZXLqisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:29.886
+!MESSAGE subscribing to classpath changes: sts4.classpath.MiGXZXLq isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:29.922
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:29.936
+!MESSAGE subsribers = {sts4.classpath.MiGXZXLq=Send Classpath Notifications(94)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:30.051
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:30.061
+!MESSAGE project productstore ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:30.075
+!MESSAGE project bookapp-mvc ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:30.086
+!MESSAGE Preparing classpath changed notification productstore
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:30.096
+!MESSAGE project demoAop ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:30.106
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:30.116
+!MESSAGE project Servers ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:30.128
+!MESSAGE classpath=114 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:30.138
+!MESSAGE project Servers SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:30.148
+!MESSAGE buffering callback sts4.classpath.MiGXZXLq productstore false 114
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:30.158
+!MESSAGE project aop ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:30.170
+!MESSAGE Preparing classpath changed notification bookapp-mvc
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:30.181
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:30.191
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:30.201
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.MiGXZXLq => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:30.216
+!MESSAGE classpath=54 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:30.248
+!MESSAGE buffering callback sts4.classpath.MiGXZXLq bookapp-mvc false 54
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:30.262
+!MESSAGE Preparing classpath changed notification demoAop
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:30.275
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:30.288
+!MESSAGE classpath=31 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:30.301
+!MESSAGE buffering callback sts4.classpath.MiGXZXLq demoAop false 31
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:30.312
+!MESSAGE Preparing classpath changed notification aop
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:30.324
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:30.361
+!MESSAGE classpath=33 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:30.373
+!MESSAGE buffering callback sts4.classpath.MiGXZXLq aop false 33
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:30.383
+!MESSAGE executing callback sts4.classpath.MiGXZXLq 4 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:25:30.513
+!MESSAGE executing callback sts4.classpath.MiGXZXLq SUCCESS [done]
+
+!ENTRY org.eclipse.core.net 4 0 2021-09-17 20:25:31.320
+!MESSAGE WinHttp.DetectAutoProxyConfigUrl for wpad failed with error 'The Proxy Auto-configuration URL was not found.
+' #12180.
+
+!ENTRY org.eclipse.ui 2 2 2021-09-17 20:25:35.444
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:26:21.662
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.MiGXZXLq
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:26:21.673
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.MiGXZXLq
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:26:21.747
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-09-17 20:26:21.761
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.MiGXZXLq => OK

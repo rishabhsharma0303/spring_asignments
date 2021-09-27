@@ -3,6 +3,5 @@ INDEX VERSION 1.4+C:\Users\ve00ym268\Documents\sts-spring-workspace\.metadata\.p
 2272825575.index
 2650383423.index
 319724757.index
-3611552065.index
 4070922900.index
 296180363.index
